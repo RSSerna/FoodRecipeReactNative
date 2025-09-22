@@ -9,14 +9,14 @@ const favoritesSlice = createSlice({
     initialState,
     reducers: {
         toggleFavorite: (state, action) => {
-            const article = action.payload; // Expecting the entire article object
+            const recipe = action.payload; // Expecting the entire article object
             const existingIndex = state.favoriteRecipes.findIndex(
-                (item) => item.id === article.idArticle // Assuming articles have an 'id' property
+                (item) => item.idFood === recipe.idFood // Assuming articles have an 'id' property
             );
             if (existingIndex >= 0) {
                 state.favoriteRecipes.splice(existingIndex, 1); // Remove from favorites
             } else {
-                state.favoriteRecipes.push(article); // Add to favorites
+                state.favoriteRecipes.push(recipe); // Add to favorites
             }
         },
     },
