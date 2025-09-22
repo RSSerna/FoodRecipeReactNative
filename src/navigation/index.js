@@ -12,22 +12,22 @@ import RecipeDetailScreen from "../screens/RecipeDetailScreen";
 const Stack = createNativeStackNavigator();
 
 function AppNavigation() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Welcome"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="RecipeDetail" component={RecipeDetailScreen} />
-        <Stack.Screen name="MyFood" component={MyRecipeScreen} />
-        <Stack.Screen name="CustomRecipesScreen" component={CustomRecipesScreen} />
-        <Stack.Screen name="RecipesFormScreen" component={RecipesFormScreen} />
-        <Stack.Screen name="FavoriteScreen" component={FavoriteScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                initialRouteName="Welcome"
+                screenOptions={{ headerShown: false }}
+            >
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Welcome" component={WelcomeScreen} />
+                <Stack.Screen name="RecipeDetail" component={RecipeDetailScreen} />
+                <Stack.Screen name="MyFood" component={MyRecipeScreen} />
+                <Stack.Screen name="CustomRecipesScreen" component={CustomRecipesScreen} />
+                <Stack.Screen name="RecipesFormScreen" component={RecipesFormScreen} />
+                <Stack.Screen name="FavoriteScreen" component={FavoriteScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
 export default AppNavigation;
